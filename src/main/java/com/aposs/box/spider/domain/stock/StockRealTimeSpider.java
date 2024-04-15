@@ -120,7 +120,7 @@ public class StockRealTimeSpider {
             if (isOpen) {
                 Long time = dataJson.getLong("f86");
                 // 行情时间
-                LocalDate stockDate = Instant.ofEpochMilli(time).atZone(ZoneId.systemDefault()).toLocalDate();
+                LocalDate stockDate = Instant.ofEpochSecond(time).atZone(ZoneId.systemDefault()).toLocalDate();
 
 
                 LocalDate todayLocalDate = LocalDate.now();
